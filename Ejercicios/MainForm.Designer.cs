@@ -1,6 +1,6 @@
 ﻿namespace Ejercicios
 {
-    partial class Form1
+    partial class MainForm
     {
         /// <summary>
         /// Required designer variable.
@@ -57,8 +57,9 @@
             this.capitulo9ToolStripMenuItem.Name = "capitulo9ToolStripMenuItem";
             this.capitulo9ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.capitulo9ToolStripMenuItem.Text = "Capitulo &9";
+            this.capitulo9ToolStripMenuItem.Click += new System.EventHandler(this.Capitulo9ToolStripMenuItem_Click);
             // 
-            // Form1
+            // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -66,7 +67,7 @@
             this.Controls.Add(this.menuStrip1);
             this.IsMdiContainer = true;
             this.MainMenuStrip = this.menuStrip1;
-            this.Name = "Form1";
+            this.Name = "MainForm";
             this.Text = "Tarea 3.3";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
