@@ -54,6 +54,7 @@
     </Compile>
     <Compile Include="Capitulo 10\Estudiantes.cs" />
     <Compile Include="Capitulo 10\Inventario.cs" />
+    <Compile Include="Capitulo 10\Polígono.cs" />
     <Compile Include="Capitulo 9\Capitulo9.cs">
       <SubType>Form</SubType>
     </Compile>
