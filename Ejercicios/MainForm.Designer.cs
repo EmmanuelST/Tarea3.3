@@ -31,6 +31,7 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.ejerciciosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.capitulo9ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.capitulo10ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -47,7 +48,8 @@
             // ejerciciosToolStripMenuItem
             // 
             this.ejerciciosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.capitulo9ToolStripMenuItem});
+            this.capitulo9ToolStripMenuItem,
+            this.capitulo10ToolStripMenuItem});
             this.ejerciciosToolStripMenuItem.Name = "ejerciciosToolStripMenuItem";
             this.ejerciciosToolStripMenuItem.Size = new System.Drawing.Size(68, 20);
             this.ejerciciosToolStripMenuItem.Text = "Ejercicios";
@@ -58,6 +60,13 @@
             this.capitulo9ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.capitulo9ToolStripMenuItem.Text = "Capitulo &9";
             this.capitulo9ToolStripMenuItem.Click += new System.EventHandler(this.Capitulo9ToolStripMenuItem_Click);
+            // 
+            // capitulo10ToolStripMenuItem
+            // 
+            this.capitulo10ToolStripMenuItem.Name = "capitulo10ToolStripMenuItem";
+            this.capitulo10ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.capitulo10ToolStripMenuItem.Text = "Capitulo &10";
+            this.capitulo10ToolStripMenuItem.Click += new System.EventHandler(this.Capitulo10ToolStripMenuItem_Click);
             // 
             // MainForm
             // 
@@ -81,6 +90,7 @@
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem ejerciciosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem capitulo9ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem capitulo10ToolStripMenuItem;
     }
 }
 

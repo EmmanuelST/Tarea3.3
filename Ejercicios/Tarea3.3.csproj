@@ -46,6 +46,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Capitulo 10\Capitulo10.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Capitulo 10\Capitulo10.Designer.cs">
+      <DependentUpon>Capitulo10.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Capitulo 10\Estudiantes.cs" />
+    <Compile Include="Capitulo 10\Inventario.cs" />
     <Compile Include="Capitulo 9\Capitulo9.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -60,6 +68,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Capitulo 10\Capitulo10.resx">
+      <DependentUpon>Capitulo10.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Capitulo 9\Capitulo9.resx">
       <DependentUpon>Capitulo9.cs</DependentUpon>
     </EmbeddedResource>
