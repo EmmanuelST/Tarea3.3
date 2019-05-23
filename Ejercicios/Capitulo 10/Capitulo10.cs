@@ -9,15 +9,18 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace Ejercicios.Capitulo_10
 {
     public partial class Capitulo10 : Form
     {
         List<Estudiantes> lista;
+        List<Inventario> inventario;
         public Capitulo10()
         {
             InitializeComponent();
             lista = new List<Estudiantes>();
+            inventario = new List<Inventario>();
            
         }
 
@@ -102,6 +105,83 @@ namespace Ejercicios.Capitulo_10
             TelefonoTutorEstudiantetextBox.Text = estudiante.TelefonoTutor;
             DireccionEstudiantetextBox.Text = estudiante.Direccion;
 
+        }
+
+        private void GuardarProductobutton_Click(object sender, EventArgs e)
+        {
+            inventario.Add(getProducto());
+            LimpiarProducto();
+        }
+
+        private Inventario getProducto()
+        {
+
+            Inventario producto = new Inventario();
+
+            producto.CodigoProducto = (int)CodigoProductonumericUpDown.Value;
+            producto.NombreProducto = NombreProductotextBox.Text;
+            producto.PrecioProducto = (float)PrecioProductonumericUpDown.Value;
+            producto.CantidadProducto = (int)CantidadProductonumericUpDown.Value;
+            producto.FechaCaducidad = FechaCaducidadProdcutodateTimePicker.Value;
+            producto.DescripcionProducto = DescripcionProductotextBox.Text;
+            producto.Gondola = (string)GondolaProductocomboBox.SelectedItem;
+
+            return producto;
+        }
+
+        private void LimpiarProducto()
+        {
+            CodigoProductonumericUpDown.Value = 0;
+            NombreProductotextBox.Text = string.Empty;
+            PrecioProductonumericUpDown.Value= 0;
+            CantidadProductonumericUpDown.Value = 0;
+            FechaCaducidadProdcutodateTimePicker.Value = DateTime.Now;
+            DescripcionProductotextBox.Text = string.Empty;
+            GondolaProductocomboBox.SelectedItem = string.Empty;
+        }
+
+        private void NuevoProductobutton_Click(object sender, EventArgs e)
+        {
+            LimpiarProducto();
+        }
+
+        private void BuscarProductobutton_Click(object sender, EventArgs e)
+        {
+            setProducto(BuscarProducto((int)CodigoProductonumericUpDown.Value));
+        }
+
+        private Inventario BuscarProducto(int codigo)
+        {
+            Inventario producto = new Inventario();
+
+            foreach(Inventario obj in inventario)
+            {
+                if (obj.CodigoProducto == codigo)
+                {
+                    return producto = obj; 
+                }
+            }
+
+            return producto;
+        }
+
+        private void setProducto(Inventario producto)
+        {
+            CodigoProductonumericUpDown.Value = producto.CodigoProducto;
+            NombreProductotextBox.Text = producto.NombreProducto;
+            PrecioProductonumericUpDown.Value = (int)producto.PrecioProducto;
+            CantidadProductonumericUpDown.Value = producto.CantidadProducto;
+            FechaCaducidadProdcutodateTimePicker.Value = producto.FechaCaducidad;
+            DescripcionProductotextBox.Text = producto.DescripcionProducto;
+            GondolaProductocomboBox.SelectedItem = producto.Gondola;
+
+          
+        }
+
+        private void Eliminarbutton_Click(object sender, EventArgs e)
+        {
+            inventario.Remove(BuscarProducto((int)CodigoProductonumericUpDown.Value));
+            LimpiarProducto();
         }
     }
 }
