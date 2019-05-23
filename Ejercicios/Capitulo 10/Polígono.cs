@@ -9,10 +9,59 @@ namespace Ejercicios.Capitulo_10
     class Polígono
     {
 
-        public int Lados { get; set; }
-        public int Vertices { get; set; }
-        public float AnguloInterior { get; set; }
-        public float AnguloExterior { get; set; }
+        public int Lados
+        {
+            get
+            {
+                return Lados;
+
+            }
+            set
+            {
+                if (value < 0)
+                    value = 1;
+            }
+
+        }
+
+
+        public int Vertices
+        {
+            get
+            {
+                return Vertices;
+            }
+            set
+            {
+                if (value < Lados)
+                    value = Lados;
+            }
+        }
+        public float AnguloInterior
+        {
+            get
+            {
+                return AnguloInterior;
+            }
+            set
+            {
+                if (value < 0)
+                    value = 1;
+            }
+        }
+        public float AnguloExterior
+        {
+            get
+            {
+                return AnguloExterior;
+            }
+            set
+            {
+                if (value < 0)
+                    value = 1;
+            }
+
+        }
 
         public Polígono()
         {
@@ -28,6 +77,17 @@ namespace Ejercicios.Capitulo_10
             this.Vertices = vertices;
             this.AnguloInterior = anguloInterior;
             this.AnguloExterior = anguloExterioro;
+        }
+
+        public override string ToString()
+        {
+            string cadena;
+
+            cadena = "Lados ="+Lados+", Vertices ="+Vertices+"," +
+                " Angulo Interior ="+AnguloInterior+", Angulo Exterior ="+AnguloExterior;
+
+            return cadena;
+
         }
     }
 }
