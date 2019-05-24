@@ -93,7 +93,7 @@
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage1.Size = new System.Drawing.Size(328, 304);
             this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "Capitulo 1";
+            this.tabPage1.Text = "Ejercicio 1";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
             // ProductoslistView
@@ -102,7 +102,7 @@
             this.columnHeader1,
             this.columnHeader2,
             this.columnHeader3});
-            this.ProductoslistView.Location = new System.Drawing.Point(16, 155);
+            this.ProductoslistView.Location = new System.Drawing.Point(9, 155);
             this.ProductoslistView.Name = "ProductoslistView";
             this.ProductoslistView.Size = new System.Drawing.Size(312, 143);
             this.ProductoslistView.TabIndex = 7;
@@ -205,7 +205,7 @@
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage2.Size = new System.Drawing.Size(328, 304);
             this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "Capitulo 3";
+            this.tabPage2.Text = "Ejercicio 3";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
             // Nuevobutton

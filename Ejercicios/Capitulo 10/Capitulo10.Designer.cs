@@ -31,6 +31,14 @@
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.GondolaProductocomboBox = new System.Windows.Forms.ComboBox();
+            this.label14 = new System.Windows.Forms.Label();
+            this.CantidadProductonumericUpDown = new System.Windows.Forms.NumericUpDown();
+            this.label13 = new System.Windows.Forms.Label();
+            this.BuscarProductobutton = new System.Windows.Forms.Button();
+            this.Eliminarbutton = new System.Windows.Forms.Button();
+            this.NuevoProductobutton = new System.Windows.Forms.Button();
+            this.GuardarProductobutton = new System.Windows.Forms.Button();
             this.FechaCaducidadProdcutodateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.label12 = new System.Windows.Forms.Label();
             this.PrecioProductonumericUpDown = new System.Windows.Forms.NumericUpDown();
@@ -61,23 +69,15 @@
             this.label2 = new System.Windows.Forms.Label();
             this.NombreEstudiantetextBox = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.GuardarProductobutton = new System.Windows.Forms.Button();
-            this.NuevoProductobutton = new System.Windows.Forms.Button();
-            this.Eliminarbutton = new System.Windows.Forms.Button();
-            this.BuscarProductobutton = new System.Windows.Forms.Button();
-            this.CantidadProductonumericUpDown = new System.Windows.Forms.NumericUpDown();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.GondolaProductocomboBox = new System.Windows.Forms.ComboBox();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.CantidadProductonumericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PrecioProductonumericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CodigoProductonumericUpDown)).BeginInit();
             this.tabPage2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.GradoEstudiantenumericUpDown)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.CantidadProductonumericUpDown)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -87,7 +87,7 @@
             this.tabControl1.Location = new System.Drawing.Point(13, 13);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(417, 344);
+            this.tabControl1.Size = new System.Drawing.Size(420, 344);
             this.tabControl1.TabIndex = 0;
             // 
             // tabPage1
@@ -96,9 +96,9 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(409, 318);
+            this.tabPage1.Size = new System.Drawing.Size(412, 318);
             this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "tabPage1";
+            this.tabPage1.Text = "Ejercicio 1";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
             // groupBox2
@@ -127,6 +127,88 @@
             this.groupBox2.TabIndex = 0;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Inventario";
+            // 
+            // GondolaProductocomboBox
+            // 
+            this.GondolaProductocomboBox.FormattingEnabled = true;
+            this.GondolaProductocomboBox.Items.AddRange(new object[] {
+            "Principal",
+            "Secundaria",
+            "Tercera"});
+            this.GondolaProductocomboBox.Location = new System.Drawing.Point(140, 172);
+            this.GondolaProductocomboBox.Name = "GondolaProductocomboBox";
+            this.GondolaProductocomboBox.Size = new System.Drawing.Size(246, 21);
+            this.GondolaProductocomboBox.TabIndex = 17;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(6, 175);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(50, 13);
+            this.label14.TabIndex = 16;
+            this.label14.Text = "Gondola:";
+            // 
+            // CantidadProductonumericUpDown
+            // 
+            this.CantidadProductonumericUpDown.Location = new System.Drawing.Point(140, 139);
+            this.CantidadProductonumericUpDown.Maximum = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
+            this.CantidadProductonumericUpDown.Name = "CantidadProductonumericUpDown";
+            this.CantidadProductonumericUpDown.Size = new System.Drawing.Size(246, 20);
+            this.CantidadProductonumericUpDown.TabIndex = 15;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(6, 143);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(115, 13);
+            this.label13.TabIndex = 14;
+            this.label13.Text = "Cantidad del Producto:";
+            // 
+            // BuscarProductobutton
+            // 
+            this.BuscarProductobutton.Location = new System.Drawing.Point(285, 25);
+            this.BuscarProductobutton.Name = "BuscarProductobutton";
+            this.BuscarProductobutton.Size = new System.Drawing.Size(75, 23);
+            this.BuscarProductobutton.TabIndex = 13;
+            this.BuscarProductobutton.Text = "Buscar";
+            this.BuscarProductobutton.UseVisualStyleBackColor = true;
+            this.BuscarProductobutton.Click += new System.EventHandler(this.BuscarProductobutton_Click);
+            // 
+            // Eliminarbutton
+            // 
+            this.Eliminarbutton.Location = new System.Drawing.Point(302, 277);
+            this.Eliminarbutton.Name = "Eliminarbutton";
+            this.Eliminarbutton.Size = new System.Drawing.Size(75, 23);
+            this.Eliminarbutton.TabIndex = 12;
+            this.Eliminarbutton.Text = "Eliminar";
+            this.Eliminarbutton.UseVisualStyleBackColor = true;
+            this.Eliminarbutton.Click += new System.EventHandler(this.Eliminarbutton_Click);
+            // 
+            // NuevoProductobutton
+            // 
+            this.NuevoProductobutton.Location = new System.Drawing.Point(155, 277);
+            this.NuevoProductobutton.Name = "NuevoProductobutton";
+            this.NuevoProductobutton.Size = new System.Drawing.Size(75, 23);
+            this.NuevoProductobutton.TabIndex = 11;
+            this.NuevoProductobutton.Text = "Nuevo";
+            this.NuevoProductobutton.UseVisualStyleBackColor = true;
+            this.NuevoProductobutton.Click += new System.EventHandler(this.NuevoProductobutton_Click);
+            // 
+            // GuardarProductobutton
+            // 
+            this.GuardarProductobutton.Location = new System.Drawing.Point(9, 277);
+            this.GuardarProductobutton.Name = "GuardarProductobutton";
+            this.GuardarProductobutton.Size = new System.Drawing.Size(75, 23);
+            this.GuardarProductobutton.TabIndex = 10;
+            this.GuardarProductobutton.Text = "Guardar";
+            this.GuardarProductobutton.UseVisualStyleBackColor = true;
+            this.GuardarProductobutton.Click += new System.EventHandler(this.GuardarProductobutton_Click);
             // 
             // FechaCaducidadProdcutodateTimePicker
             // 
@@ -228,7 +310,7 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(409, 318);
+            this.tabPage2.Size = new System.Drawing.Size(412, 318);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Ejercicio 2";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -429,93 +511,11 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Nombre:";
             // 
-            // GuardarProductobutton
-            // 
-            this.GuardarProductobutton.Location = new System.Drawing.Point(9, 277);
-            this.GuardarProductobutton.Name = "GuardarProductobutton";
-            this.GuardarProductobutton.Size = new System.Drawing.Size(75, 23);
-            this.GuardarProductobutton.TabIndex = 10;
-            this.GuardarProductobutton.Text = "Guardar";
-            this.GuardarProductobutton.UseVisualStyleBackColor = true;
-            this.GuardarProductobutton.Click += new System.EventHandler(this.GuardarProductobutton_Click);
-            // 
-            // NuevoProductobutton
-            // 
-            this.NuevoProductobutton.Location = new System.Drawing.Point(155, 277);
-            this.NuevoProductobutton.Name = "NuevoProductobutton";
-            this.NuevoProductobutton.Size = new System.Drawing.Size(75, 23);
-            this.NuevoProductobutton.TabIndex = 11;
-            this.NuevoProductobutton.Text = "Nuevo";
-            this.NuevoProductobutton.UseVisualStyleBackColor = true;
-            this.NuevoProductobutton.Click += new System.EventHandler(this.NuevoProductobutton_Click);
-            // 
-            // Eliminarbutton
-            // 
-            this.Eliminarbutton.Location = new System.Drawing.Point(302, 277);
-            this.Eliminarbutton.Name = "Eliminarbutton";
-            this.Eliminarbutton.Size = new System.Drawing.Size(75, 23);
-            this.Eliminarbutton.TabIndex = 12;
-            this.Eliminarbutton.Text = "Eliminar";
-            this.Eliminarbutton.UseVisualStyleBackColor = true;
-            this.Eliminarbutton.Click += new System.EventHandler(this.Eliminarbutton_Click);
-            // 
-            // BuscarProductobutton
-            // 
-            this.BuscarProductobutton.Location = new System.Drawing.Point(285, 25);
-            this.BuscarProductobutton.Name = "BuscarProductobutton";
-            this.BuscarProductobutton.Size = new System.Drawing.Size(75, 23);
-            this.BuscarProductobutton.TabIndex = 13;
-            this.BuscarProductobutton.Text = "Buscar";
-            this.BuscarProductobutton.UseVisualStyleBackColor = true;
-            this.BuscarProductobutton.Click += new System.EventHandler(this.BuscarProductobutton_Click);
-            // 
-            // CantidadProductonumericUpDown
-            // 
-            this.CantidadProductonumericUpDown.Location = new System.Drawing.Point(140, 139);
-            this.CantidadProductonumericUpDown.Maximum = new decimal(new int[] {
-            1000,
-            0,
-            0,
-            0});
-            this.CantidadProductonumericUpDown.Name = "CantidadProductonumericUpDown";
-            this.CantidadProductonumericUpDown.Size = new System.Drawing.Size(246, 20);
-            this.CantidadProductonumericUpDown.TabIndex = 15;
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(6, 143);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(115, 13);
-            this.label13.TabIndex = 14;
-            this.label13.Text = "Cantidad del Producto:";
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(6, 175);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(50, 13);
-            this.label14.TabIndex = 16;
-            this.label14.Text = "Gondola:";
-            // 
-            // GondolaProductocomboBox
-            // 
-            this.GondolaProductocomboBox.FormattingEnabled = true;
-            this.GondolaProductocomboBox.Items.AddRange(new object[] {
-            "Principal",
-            "Secundaria",
-            "Tercera"});
-            this.GondolaProductocomboBox.Location = new System.Drawing.Point(140, 172);
-            this.GondolaProductocomboBox.Name = "GondolaProductocomboBox";
-            this.GondolaProductocomboBox.Size = new System.Drawing.Size(246, 21);
-            this.GondolaProductocomboBox.TabIndex = 17;
-            // 
             // Capitulo10
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(553, 369);
+            this.ClientSize = new System.Drawing.Size(442, 369);
             this.Controls.Add(this.tabControl1);
             this.Name = "Capitulo10";
             this.Text = "Capitulo10";
@@ -523,13 +523,13 @@
             this.tabPage1.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.CantidadProductonumericUpDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PrecioProductonumericUpDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.CodigoProductonumericUpDown)).EndInit();
             this.tabPage2.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.GradoEstudiantenumericUpDown)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.CantidadProductonumericUpDown)).EndInit();
             this.ResumeLayout(false);
 
         }
