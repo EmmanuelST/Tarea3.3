@@ -54,7 +54,7 @@
     </Compile>
     <Compile Include="Capitulo 10\Ejercicio 2\Estudiantes.cs" />
     <Compile Include="Capitulo 10\EJercicio 1\Inventario.cs" />
-    <Compile Include="Capitulo 10\Ejercicoi 3,4 y 5\Polígono.cs" />
+    <Compile Include="Capitulo 10\Ejercicoi 3,4 y 5\Poligono.cs" />
     <Compile Include="Capitulo 9\Capitulo9.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -101,7 +101,12 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Capitulo 10\EJercicio 1\UI.png" />
+    <Content Include="Capitulo 10\Ejercicio 2\UI.png" />
+    <Content Include="Capitulo 10\Ejercicoi 3,4 y 5\UI.png" />
     <Content Include="Capitulo 12\Ejericio 1.gif" />
+    <Content Include="Capitulo 9\Ejercicio3UI.png" />
+    <Content Include="Capitulo 9\Ejercicio1UI.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

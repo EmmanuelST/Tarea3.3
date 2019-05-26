@@ -14,13 +14,14 @@ namespace Ejercicios.Capitulo_9
     public partial class Capitulo9 : Form
     {
         List<Mascota> lista;
+        //Pertenece al ejercicio #1
         public struct Producto
         {
             public string nombre;
             public float precio;
             public DateTime fechaCaducidad;
         }
-
+        //Perteneces al ejercicio #2
         public struct Dueño
         {
             public string nombre;
@@ -34,7 +35,7 @@ namespace Ejercicios.Capitulo_9
                 this.telefono = telefono;
             }
         }
-
+        //Perteneces al ejercicio #2
         public struct Mascota
         {
             public string nombre;
@@ -51,6 +52,7 @@ namespace Ejercicios.Capitulo_9
             lista = new List<Mascota>();
         }
 
+        //Perteneces al ejercicio #1
         private void AgregarProductobutton_Click(object sender, EventArgs e)
         {
             //boton de agregar del ejercicio 1 del capitulo 9
@@ -69,6 +71,7 @@ namespace Ejercicios.Capitulo_9
             FechaCaducidaddateTimePicker.Value = DateTime.Now;
         }
 
+        //Perteneces al ejercicio #2
         private void GuardarMascotabutton_Click(object sender, EventArgs e)
         {
             Mascota mascota;
@@ -83,7 +86,7 @@ namespace Ejercicios.Capitulo_9
             lista.Add(mascota);
             LimpiarMascota();
         }
-
+        //Perteneces al ejercicio #2
         private void LimpiarMascota()
         {
             NombreMascotatextBox.Text = string.Empty; ;
@@ -94,11 +97,12 @@ namespace Ejercicios.Capitulo_9
             DirecciónDueñotextBox.Text = string.Empty; ;
         }
 
+        //Perteneces al ejercicio #2
         private void Nuevobutton_Click(object sender, EventArgs e)
         {
             LimpiarMascota();
         }
-
+        //Perteneces al ejercicio #2
         private void BuscarMascotabutton_Click(object sender, EventArgs e)
         {
 

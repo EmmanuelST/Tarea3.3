@@ -8,22 +8,27 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Ejercicios.Capitulo_10;
 
 
 namespace Ejercicios.Capitulo_10
 {
     public partial class Capitulo10 : Form
     {
+        //Pertenece al EJercicio #2
         List<Estudiantes> lista;
+        //Pertenece al EJercicio #1
         List<Inventario> inventario;
         public Capitulo10()
         {
             InitializeComponent();
+            //Pertenece al EJercicio #2
             lista = new List<Estudiantes>();
+            //Pertenece al EJercicio #1
             inventario = new List<Inventario>();
            
         }
-
+        //Pertenece al EJercicio #2
         private void GuardarEstudiantebutton_Click(object sender, EventArgs e)
         {
 
@@ -36,7 +41,7 @@ namespace Ejercicios.Capitulo_10
 
             LimpiarEstudiante();
         }
-
+        //Pertenece al EJercicio #2
         private Estudiantes getEstudiante()
         {
             Estudiantes estudiante = new Estudiantes();
@@ -51,7 +56,7 @@ namespace Ejercicios.Capitulo_10
 
             return estudiante;
         }
-
+        //Pertenece al EJercicio #2
         private void LimpiarEstudiante()
         {
             NombreEstudiantetextBox.Text =string.Empty;
@@ -62,18 +67,18 @@ namespace Ejercicios.Capitulo_10
             TelefonoTutorEstudiantetextBox.Text = string.Empty;
             DireccionEstudiantetextBox.Text = string.Empty;
         }
-
+        //Pertenece al EJercicio #2
         private void NuevoEstudiantebutton_Click(object sender, EventArgs e)
         {
             LimpiarEstudiante();
         }
-
+        //Pertenece al EJercicio #2
         private void EliminarEstudiantebutton_Click(object sender, EventArgs e)
         {
             lista.Remove(BuscarEstudiante(MatriculaEstudiantetextBox.Text));
             LimpiarEstudiante();
         }
-
+        //Pertenece al EJercicio #2
         private Estudiantes BuscarEstudiante(string matricula)
         {
           
@@ -89,12 +94,12 @@ namespace Ejercicios.Capitulo_10
 
             return new Estudiantes();
         }
-
+        //Pertenece al EJercicio #2
         private void BuscarEstudiantebutton_Click(object sender, EventArgs e)
         {
             setEstudiante(BuscarEstudiante(MatriculaEstudiantetextBox.Text));
         }
-
+        //Pertenece al EJercicio #2
         private void setEstudiante(Estudiantes estudiante)
         {
             NombreEstudiantetextBox.Text = estudiante.Nombre; ;
@@ -106,13 +111,13 @@ namespace Ejercicios.Capitulo_10
             DireccionEstudiantetextBox.Text = estudiante.Direccion;
 
         }
-
+        //Pertenece al EJercicio #1
         private void GuardarProductobutton_Click(object sender, EventArgs e)
         {
             inventario.Add(getProducto());
             LimpiarProducto();
         }
-
+        //Pertenece al EJercicio #1
         private Inventario getProducto()
         {
 
@@ -128,7 +133,7 @@ namespace Ejercicios.Capitulo_10
 
             return producto;
         }
-
+        //Pertenece al EJercicio #1
         private void LimpiarProducto()
         {
             CodigoProductonumericUpDown.Value = 0;
@@ -139,17 +144,17 @@ namespace Ejercicios.Capitulo_10
             DescripcionProductotextBox.Text = string.Empty;
             GondolaProductocomboBox.SelectedItem = string.Empty;
         }
-
+        //Pertenece al EJercicio #1
         private void NuevoProductobutton_Click(object sender, EventArgs e)
         {
             LimpiarProducto();
         }
-
+        //Pertenece al EJercicio #1
         private void BuscarProductobutton_Click(object sender, EventArgs e)
         {
             setProducto(BuscarProducto((int)CodigoProductonumericUpDown.Value));
         }
-
+        //Pertenece al EJercicio #1
         private Inventario BuscarProducto(int codigo)
         {
             Inventario producto = new Inventario();
@@ -164,7 +169,7 @@ namespace Ejercicios.Capitulo_10
 
             return producto;
         }
-
+        //Pertenece al EJercicio #1
         private void setProducto(Inventario producto)
         {
             CodigoProductonumericUpDown.Value = producto.CodigoProducto;
@@ -177,11 +182,28 @@ namespace Ejercicios.Capitulo_10
 
           
         }
-
+        //Pertenece al EJercicio #1
         private void Eliminarbutton_Click(object sender, EventArgs e)
         {
             inventario.Remove(BuscarProducto((int)CodigoProductonumericUpDown.Value));
             LimpiarProducto();
+        }
+        //Pertenece al EJercicio #3,4 y 5
+        private void CalcualrPerimetrobutton_Click(object sender, EventArgs e)
+        {
+            Poligono poligono = new Poligono();
+
+            poligono.Lados = (int)LadosPoligononumericUpDown.Value;
+            poligono.Longitud = (float)LongitudPoligonosnumericUpDown.Value;
+
+            ResultadoPoligonolabel.Text = poligono.perimetro().ToString(); 
+        }
+        //Pertenece al EJercicio #3,4 y 5
+        private void LimpiarPerimetrobutton_Click(object sender, EventArgs e)
+        {
+            LadosPoligononumericUpDown.Value = 0;
+            LongitudPoligonosnumericUpDown.Value = 0;
+            ResultadoPoligonolabel.Text = "0";
         }
     }
 }

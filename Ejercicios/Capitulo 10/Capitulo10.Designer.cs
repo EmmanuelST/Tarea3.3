@@ -69,6 +69,16 @@
             this.label2 = new System.Windows.Forms.Label();
             this.NombreEstudiantetextBox = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.label15 = new System.Windows.Forms.Label();
+            this.LadosPoligononumericUpDown = new System.Windows.Forms.NumericUpDown();
+            this.label16 = new System.Windows.Forms.Label();
+            this.LongitudPoligonosnumericUpDown = new System.Windows.Forms.NumericUpDown();
+            this.CalcualrPerimetrobutton = new System.Windows.Forms.Button();
+            this.LimpiarPerimetrobutton = new System.Windows.Forms.Button();
+            this.label17 = new System.Windows.Forms.Label();
+            this.ResultadoPoligonolabel = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -78,12 +88,17 @@
             this.tabPage2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.GradoEstudiantenumericUpDown)).BeginInit();
+            this.tabPage3.SuspendLayout();
+            this.groupBox3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.LadosPoligononumericUpDown)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.LongitudPoligonosnumericUpDown)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
             // 
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
+            this.tabControl1.Controls.Add(this.tabPage3);
             this.tabControl1.Location = new System.Drawing.Point(13, 13);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
@@ -511,6 +526,106 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Nombre:";
             // 
+            // tabPage3
+            // 
+            this.tabPage3.Controls.Add(this.groupBox3);
+            this.tabPage3.Location = new System.Drawing.Point(4, 22);
+            this.tabPage3.Name = "tabPage3";
+            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage3.Size = new System.Drawing.Size(412, 318);
+            this.tabPage3.TabIndex = 2;
+            this.tabPage3.Text = "Ejercicio 3,4 y 5";
+            this.tabPage3.UseVisualStyleBackColor = true;
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.ResultadoPoligonolabel);
+            this.groupBox3.Controls.Add(this.label17);
+            this.groupBox3.Controls.Add(this.LimpiarPerimetrobutton);
+            this.groupBox3.Controls.Add(this.CalcualrPerimetrobutton);
+            this.groupBox3.Controls.Add(this.LongitudPoligonosnumericUpDown);
+            this.groupBox3.Controls.Add(this.label16);
+            this.groupBox3.Controls.Add(this.LadosPoligononumericUpDown);
+            this.groupBox3.Controls.Add(this.label15);
+            this.groupBox3.Location = new System.Drawing.Point(6, 6);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(305, 165);
+            this.groupBox3.TabIndex = 0;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Perimetro de un Poligono";
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(7, 20);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(95, 13);
+            this.label15.TabIndex = 0;
+            this.label15.Text = "Cantidad de lados:";
+            // 
+            // LadosPoligononumericUpDown
+            // 
+            this.LadosPoligononumericUpDown.Location = new System.Drawing.Point(124, 18);
+            this.LadosPoligononumericUpDown.Name = "LadosPoligononumericUpDown";
+            this.LadosPoligononumericUpDown.Size = new System.Drawing.Size(172, 20);
+            this.LadosPoligononumericUpDown.TabIndex = 1;
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(10, 49);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(106, 13);
+            this.label16.TabIndex = 2;
+            this.label16.Text = "longitud de los lados:";
+            // 
+            // LongitudPoligonosnumericUpDown
+            // 
+            this.LongitudPoligonosnumericUpDown.DecimalPlaces = 2;
+            this.LongitudPoligonosnumericUpDown.Location = new System.Drawing.Point(124, 49);
+            this.LongitudPoligonosnumericUpDown.Name = "LongitudPoligonosnumericUpDown";
+            this.LongitudPoligonosnumericUpDown.Size = new System.Drawing.Size(172, 20);
+            this.LongitudPoligonosnumericUpDown.TabIndex = 3;
+            // 
+            // CalcualrPerimetrobutton
+            // 
+            this.CalcualrPerimetrobutton.Location = new System.Drawing.Point(224, 136);
+            this.CalcualrPerimetrobutton.Name = "CalcualrPerimetrobutton";
+            this.CalcualrPerimetrobutton.Size = new System.Drawing.Size(75, 23);
+            this.CalcualrPerimetrobutton.TabIndex = 4;
+            this.CalcualrPerimetrobutton.Text = "Calcular";
+            this.CalcualrPerimetrobutton.UseVisualStyleBackColor = true;
+            this.CalcualrPerimetrobutton.Click += new System.EventHandler(this.CalcualrPerimetrobutton_Click);
+            // 
+            // LimpiarPerimetrobutton
+            // 
+            this.LimpiarPerimetrobutton.Location = new System.Drawing.Point(143, 136);
+            this.LimpiarPerimetrobutton.Name = "LimpiarPerimetrobutton";
+            this.LimpiarPerimetrobutton.Size = new System.Drawing.Size(75, 23);
+            this.LimpiarPerimetrobutton.TabIndex = 5;
+            this.LimpiarPerimetrobutton.Text = "Limpiar";
+            this.LimpiarPerimetrobutton.UseVisualStyleBackColor = true;
+            this.LimpiarPerimetrobutton.Click += new System.EventHandler(this.LimpiarPerimetrobutton_Click);
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Location = new System.Drawing.Point(10, 88);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(58, 13);
+            this.label17.TabIndex = 6;
+            this.label17.Text = "Resultado:";
+            // 
+            // ResultadoPoligonolabel
+            // 
+            this.ResultadoPoligonolabel.AutoSize = true;
+            this.ResultadoPoligonolabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ResultadoPoligonolabel.Location = new System.Drawing.Point(75, 88);
+            this.ResultadoPoligonolabel.Name = "ResultadoPoligonolabel";
+            this.ResultadoPoligonolabel.Size = new System.Drawing.Size(38, 24);
+            this.ResultadoPoligonolabel.TabIndex = 7;
+            this.ResultadoPoligonolabel.Text = "0.0";
+            // 
             // Capitulo10
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -530,6 +645,11 @@
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.GradoEstudiantenumericUpDown)).EndInit();
+            this.tabPage3.ResumeLayout(false);
+            this.groupBox3.ResumeLayout(false);
+            this.groupBox3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.LadosPoligononumericUpDown)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.LongitudPoligonosnumericUpDown)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -577,5 +697,15 @@
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.ComboBox GondolaProductocomboBox;
         private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.TabPage tabPage3;
+        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.Button LimpiarPerimetrobutton;
+        private System.Windows.Forms.Button CalcualrPerimetrobutton;
+        private System.Windows.Forms.NumericUpDown LongitudPoligonosnumericUpDown;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.NumericUpDown LadosPoligononumericUpDown;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Label ResultadoPoligonolabel;
+        private System.Windows.Forms.Label label17;
     }
 }
